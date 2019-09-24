@@ -1,0 +1,192 @@
+/*************************fonts*************************/
+@font-face {
+  font-family: openSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+/*************************index.html CSS*************************/
+body {
+    background: #f7f7f7;
+    font-family: openSans;
+}
+#loader {
+    display: none;
+    border: 16px solid #d4d1d1;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 37%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+div.backListing-nav {
+    padding: 55px 0px 40px 0px;
+}
+
+.backListing-nav a, .eventListing-upcoming p {
+    font-family: openSans;
+    color: #484848;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.eventListing-upcoming p {
+	font-size: 16px;
+}
+.backListing-nav a i {
+    padding-right: 7px;
+}
+
+.listingResults {
+    background: #fff;
+    padding: 20px 25px;
+    height: 130px;
+  	position: relative;
+  	box-shadow: 0px 0px 7px 1px #cccccc38;
+  	margin: 30px auto;
+}
+
+.listingResults img.personImage {
+    border-radius: 80px;
+    width: 80px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.listingResults .personDetails {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 25px;
+}
+.listingResults .personDetails p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 204px;
+    margin: 0px;
+}
+.listingResults .personDetails p.name {
+	font-size: 16px;
+	color: #484848;
+}
+.listingResults .personDetails .listingSocialLink {
+    color: #7f7f7f;
+    font-size: 14px;
+}
+
+div.eventListing-upcoming {
+    padding: 35px 0px 30px 0px;
+}
+
+.eventListing-eve {
+    padding: 30px 25px;
+    background: #fff;
+    box-shadow: 0px 0px 7px 1px #cccccc38;
+    margin-bottom: 30px;
+}
+
+.eventListing-eve p.eventDetails {
+    font-size: 16px;
+    color: #484848;
+}
+
+.eventListing-eve p.country, .eventListing-eve p.venue, .eventListing-eve p.city, .eventListing-eve p.date {
+    font-size: 16px;
+    color: #484848;
+}
+.eventListing-eve p.country-name, .eventListing-eve p.venue-loc, .eventListing-eve p.city-name, .eventListing-eve p.date-e {
+    font-size: 14px;
+    color: #7f7f7f;
+}
+p.country-name, p.city-name {
+    margin-bottom: 25px;
+}
+
+p.venue-loc, p.date-e {
+    margin-bottom: 0px;
+}
+
+.eventListing-eve .row p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 135px;
+}
+.searchEvent {
+	margin-top: 160px;
+    position: relative;
+}
+.searchEvent input[type="text"] {
+    width: 100%;
+    border: none;
+    line-height: 70px;
+    padding-left: 20px;
+    font-family: openSans;
+    box-shadow: 0px 0px 7px 1px #cccccc38;
+}
+
+.searchEvent button {
+    width: 50px;
+    background: no-repeat;
+    border: none;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+}
+.searchEvent button svg {
+	color: #7f7f7f;
+	fill: currentColor;
+}
+
+.searchEvent button:focus, .searchEvent input:focus {
+	outline: none;
+}
+
+
+/*************************Media Queries*************************/
+
+
+@media only screen and (max-width: 1200px) {
+	.listingResults .personDetails p {
+		max-width: 140px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.listingResults .personDetails p {
+		max-width: 100%;
+	}
+	p.venue-loc, p.date-e {
+		margin-bottom: 15px;
+	}
+}
+@media only screen and (max-width: 767px){
+	p.venue-loc, p.date-e {
+	    margin-bottom: 0px;
+	}
+}
